@@ -1,14 +1,14 @@
 import 'reflect-metadata';
 
-import './shared/infra/database';
+import '@shared/infra/typeorm';
 
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import 'express-async-errors';
 
-import routes from './shared/infra/http/routes';
-import uploadConfig from './config/upload';
-import AppError from './shared/errors/AppError';
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
+import routes from './routes';
 
 const app = express();
 
